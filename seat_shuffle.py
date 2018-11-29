@@ -6,9 +6,22 @@ import random
 
 with open("members.txt", mode="r") as f:
     members = f.read()
+# 文字列を分割するsplitメソッド
+    updated_list = members.split()
+
+# ランダムに複数の要素を選択（重複なし）: random.sample()
+# https://note.nkmk.me/python-random-choice-sample-choices/
+
+first_table = random.sample(updated_list, 6)
+
+second_table = random.sample(updated_list, 5)
+
+third_table = random.sample(updated_list, 4)
 
 
-print(members)
+print(f"Table1: {first_table}")
+print(f"Table2: {second_table}")
+print(f"Table3: {third_table}")
 
 
 
